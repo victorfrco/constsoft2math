@@ -68,3 +68,12 @@ math.prototype.primo = function(num){
 			return true;
 	}
 };
+
+math.prototype.permutacao = function(texto){
+	var arrayTexto = texto.split(";")
+
+	console.log(arrayTexto.length);
+
+	var calcPerm = new math();
+	return calcPerm.fatorial(arrayTexto.length);
+};
