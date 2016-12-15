@@ -70,6 +70,7 @@ math.prototype.primo = function(num){
 };
 
 math.prototype.permutacao = function(texto){
+	console.log('Elementos devem ser separados por ;');
 	var arrayTexto = texto.split(";")
 
 	console.log(arrayTexto.length);
