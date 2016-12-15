@@ -70,7 +70,6 @@ math.prototype.primo = function(num){
 };
 
 math.prototype.permutacao = function(texto){
-	console.log('Elementos devem ser separados por ;');
 	var arrayTexto = texto.split(";")
 
 	console.log(arrayTexto.length);
@@ -78,3 +77,38 @@ math.prototype.permutacao = function(texto){
 	var calcPerm = new math();
 	return calcPerm.fatorial(arrayTexto.length);
 };
+
+function fatorial(){
+  var i = 1,
+  fat = 1,
+  n = prompt('Por favor, digite o número que deseja calcular o fatorial:');
+
+  while( i <= n ){
+              var fat = fat * i;
+              i += 1;
+              }
+              alert('O fatorial de ' + n + ' é ' + fat);
+  }
+
+    function CombineElements(collection, elementCount) {
+      var combinations = GenerateCombinations(collection.length, elementCount);
+
+      var res = [];
+
+      for(i = 0; i < combinations.length; i++) {
+
+        bitmapIndex = combinations[i].toString(2).split("").reverse().join("");
+        console.debug(i + ':' + bitmapIndex);
+        var arItem = '';
+
+        for(j = 0; j < bitmapIndex.length + 1; j++)
+        {
+          if (bitmapIndex.substring(j,j+1) == '1')
+            arItem += collection[j];
+        }
+
+        res.push(arItem);
+      }
+      return res;
+    }
+
