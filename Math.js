@@ -1,7 +1,27 @@
-var intbin = require('./IntegerToBinary.js');
+const intToBin = require('./IntegerToBinary.js');
 
-class Math {
-	constructor() {
-		this.integerToBinary = intbin;
-	}
+function math() {}
+
+math.prototype.operacao = function (a, b, op) {
+	if(op == "+"){
+  	return a+b;
+  }
+  else if(op == "-"){
+  	return a-b;
+  }
+  else if(op == "*"){
+  	return a*b;
+  }
+  else if(op == "/"){
+  	if(b == 0)
+    	return null;
+    else{
+    	return a/b;
+    }
+  }
+  else{
+  	return null;
+  }
 };
+
+math.prototype.intToBin = intToBin;
