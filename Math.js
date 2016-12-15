@@ -1,5 +1,3 @@
-const intToBin = require('./IntegerToBinary.js');
-
 function math() {}
 
 math.prototype.operacao = function (a, b, op) {
@@ -24,10 +22,14 @@ math.prototype.operacao = function (a, b, op) {
   }
 };
 
+math.prototype.intToBin = function (number) {
+	return (number >>> 0).toString(2);	
+};
+
 math.prototype.arranjoSimples = function(n1, n2) {
 	var fatn1 = 1;
 	var fatn2 = 1;
-  var aux = n1 - n2;
+	var aux = n1 - n2;
     
      for(i = 1; i < n1; i++)
          fatn1 += fatn1 * i;
@@ -41,4 +43,3 @@ math.prototype.arranjoSimples = function(n1, n2) {
     
     return fatt;
 };
-math.prototype.intToBin = intToBin;
