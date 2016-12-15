@@ -78,19 +78,20 @@ math.prototype.permutacao = function(texto){
 	return calcPerm.fatorial(arrayTexto.length);
 };
 
-function fatorial(){
-  var i = 1,
-  fat = 1,
-  n = prompt('Por favor, digite o número que deseja calcular o fatorial:');
+math.prototype.function fatorial(n){
+  var i = 1;
+  var fat = 1;
+  
 
   while( i <= n ){
-              var fat = fat * i;
+              fat = fat * i;
               i += 1;
-              }
-              alert('O fatorial de ' + n + ' é ' + fat);
-  }
+}
+	return fat;
+	
+  };
 
-    function CombineElements(collection, elementCount) {
+math.prototype.function CombineElements(collection, elementCount) {
       var combinations = GenerateCombinations(collection.length, elementCount);
 
       var res = [];
